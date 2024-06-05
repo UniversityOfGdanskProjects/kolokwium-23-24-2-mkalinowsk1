@@ -10,7 +10,7 @@ const Rental = require('./models/rental');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect('mongodb://localhost:27017/baza-kolos', { 
+mongoose.connect('mongodb://localhost:27017/video_rental', { 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
 }).then(() => {
