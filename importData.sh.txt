@@ -1,0 +1,7 @@
+docker run -d -p 27017:27017 --name video_rental mongo:latest
+docker cp ./Desktop/input_kolos baza-kolos:/input
+docker exec -it nazwa_bazy bash
+cd input/input_kolos
+mongoimport --db video_rental --collection Movies --file movies.json --jsonArray
+mongoimport --db video_rental --collection Customers --file customers_movies.json --jsonArray
+mongoimport --db video_rental --collection Rentals --file movies_rentals.json --jsonArray
